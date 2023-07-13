@@ -17,7 +17,7 @@ export default function Home() {
     useNavContext();
 
   return (
-    <main className="h-screen">
+    <main className="h-screen overflow-x-hidden overflow-y-scroll">
       <Hero />
       <div className="bg-gradient-to-b from-[#e2f6fd] via-[#c6edfc] to-[#e4fef1]">
         <section className="py-8 px-4 sm:p-16 flex flex-col w-full gap-12 justify-center items-center box-border">
@@ -42,7 +42,10 @@ export default function Home() {
                 lectus posuere nisi dignissim gravida at ac justo."
             />
           </div>
-          <div className="pt-12 w-full max-w-[900px]" ref={clientsRef}>
+          <div
+            className="pt-12 w-full max-w-[350px]  sm:max-w-[900px]"
+            ref={clientsRef}
+          >
             <p className="text-xs sm:text-sm font-bold text-center tracking-widest text-gray-500 mb-6">
               CLIENTS THAT LOVE US
             </p>
